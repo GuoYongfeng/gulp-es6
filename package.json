@@ -1,20 +1,25 @@
 {
-  "name": "es6",
+  "name": "gulp-es6",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "gulp es6 babel",
+  "main": "gulpfile.babel.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Bruce",
-  "license": "ISC",
-  "devDependencies": {
-    "babel-core": "^6.3.13",
-    "babel-preset-es2015": "^6.3.13",
-    "browser-sync": "^2.10.0",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-babel": "^6.1.1",
-    "gulp-notify": "^2.2.0",
-    "gulp-sass": "^2.1.0"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuoYongfeng/gulp-es6.git"
+  },
+  "keywords": [
+    "gulp",
+    "es6",
+    "react",
+    "babel"
+  ],
+  "author": "GuoYongfeng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GuoYongfeng/gulp-es6/issues"
+  },
+  "homepage": "https://github.com/GuoYongfeng/gulp-es6#readme"
+}
