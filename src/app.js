@@ -2,4 +2,4 @@
 
 let str = "ES6";
 
-alert(str);
+console.log('gogogo!')
