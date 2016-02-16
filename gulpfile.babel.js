@@ -23,6 +23,12 @@ gulp.task('babel',() => {
     .pipe(babel())
     .pipe(gulp.dest('dist'))
     .pipe(notify({ message: 'babel task complete' }));
+
+  gulp.src('examples/*.js')
+    .pipe(babel())
+    .pipe(gulp.dest('examples/compile'))
+    .pipe(notify({ message: 'babel task complete' }));
+
 })
 
 gulp.task('js-watch', ['babel'], browserSync.reload);
@@ -35,13 +41,13 @@ gulp.task('serve', ['sass','babel'], () => {
     });
 
     gulp.watch("*.html").on('change', browserSync.reload);
-    gulp.watch('src/sass/app.scss', ['sass']);
+    gulp.watch('*.scss', ['sass']);
     gulp.watch("src/*.js", ['js-watch']);
 });
 
-gulp.task('default', ['sass','babel','serve']);
+gulp.task('default', ['serve']);
 
 gulp.task('watch', () => {
   gulp.watch('src/sass/app.scss',['sass']);
-  gulp.watch('src/app.js', ['babel']);
+  gulp.watch(['src/*.js', 'examples/*.js'], ['babel']);
 })
